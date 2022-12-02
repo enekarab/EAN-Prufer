@@ -5,49 +5,49 @@
 		
 		<script>
 			"use strict";
-			function Rechne() {
-				var vN1;
-				var vN2;
-				var vN3;
-				var vN4;
-				var vN5;
-				var vN6;
-				var vN7;
-				var vN8;
-				var vN9;
-				var vN10;
-				var vN11;
-				var vN12;
-				var vErgebnisse;
-				var vPrüfziffer;
+			function rechne() {
+				var vZ1;
+				var vZ2;
+				var vZ3;
+				var vZ4;
+				var vZ5;
+				var vZ6;
+				var vZ7;
+				var vZ8;
+				var vZ9;
+				var vZ10;
+				var vZ11;
+				var vZ12;
+				var vPruefsumme;
+				var vPruefziffer;
 				var vAusgabeHtml;
 				
-				vN1=parseFloat(document.getElementById("idZ1").value);
-				vN2=parseFloat(document.getElementById("idZ2").value);
-				vN3=parseFloat(document.getElementById("idZ3").value);
-				vN4=parseFloat(document.getElementById("idZ4").value);
-				vN5=parseFloat(document.getElementById("idZ5").value);
-				vN6=parseFloat(document.getElementById("idZ6").value);
-				vN7=parseFloat(document.getElementById("idZ7").value);
-				vN8=parseFloat(document.getElementById("idZ8").value);
-				vN9=parseFloat(document.getElementById("idZ9").value);
-				vN10=parseFloat(document.getElementById("idZ10").value);
-				vN11=parseFloat(document.getElementById("idZ11").value);
-				vN12=parseFloat(document.getElementById("idZ12").value);
+				vZ1=parseFloat(document.getElementById("idZ1").value);
+				vZ2=parseFloat(document.getElementById("idZ2").value);
+				vZ3=parseFloat(document.getElementById("idZ3").value);
+				vZ4=parseFloat(document.getElementById("idZ4").value);
+				vZ5=parseFloat(document.getElementById("idZ5").value);
+				vZ6=parseFloat(document.getElementById("idZ6").value);
+				vZ7=parseFloat(document.getElementById("idZ7").value);
+				vZ8=parseFloat(document.getElementById("idZ8").value);
+				vZ9=parseFloat(document.getElementById("idZ9").value);
+				vZ10=parseFloat(document.getElementById("idZ10").value);
+				vZ11=parseFloat(document.getElementById("idZ11").value);
+				vZ12=parseFloat(document.getElementById("idZ12").value);
 				
 								
-		vErgebnisse=(vN1*1)+(vN2*3)+(vN3*1)+(vN4*3)+(vN5*1)+(vN6*3)+(vN7*1)+(vN8*3)+(vN9*1)+(vN10*3)+(vN11*1)+(vN12*3);
+				vPruefsumme=(vZ1*1)+(vZ2*3)+(vZ3*1)+(vZ4*3)+(vZ5*1)+(vZ6*3)+(vZ7*1)+(vZ8*3)+(vZ9*1)+(vZ10*3)+(vZ11*1)+(vZ12*3);
 				
-				vPrüfziffer=10-(vErgebnisse%10);
+				vPruefziffer=10-(vPruefsumme%10);
 				
-				if(vPrüfziffer==10){
+				if(vPruefziffer==10){
 				
-					vPrüfziffer=0;
+					vPruefziffer=0;
 				
 				}
 				
-				vAusgabeHtml = " Die Artikelnummer lautet: " + vN1+vN2+vN3+vN4+vN5+vN6+vN7+vN8+vN9+vN10+vN11+vN12+ ". ";
-				vAusgabeHtml= vAusgabeHtml + "Die Prüfsumme ist " +vErgebnisse+ " und die Prüfziffer ist " +vPrüfziffer;
+				vAusgabeHtml = " Die Artikelnummer lautet: " + vZ1+vZ2+vZ3+vZ4+vZ5+vZ6+vZ7+vZ8+vZ9+vZ10+vZ11+vZ12+ ". ";
+				vAusgabeHtml= vAusgabeHtml + "Die Prüfsumme ist " +vPruefsumme+ " und die Prüfziffer ist " +vPruefziffer;
 				
 				document.getElementById("idAusgabeHtml").innerHTML=vAusgabeHtml;
 				
@@ -75,10 +75,10 @@
 		
 		<br> 
 		<br> 
-		<button onclick="rechne();">Berechne Prüfziffer!</button>
+		<button onclick="rechne();">Berechne Prüfziffer</button>
 		<br> 
 		<br> 
-		<div id="idAusgabeHtml">Die Prüfsumme ist: 60 und die Prüfziffer ist: 0</div>
+		<div id="idAusgabeHtml">Die Prüfsumme ist: 58 und die Prüfziffer ist: 2</div>
 	
 
 </body></html>
