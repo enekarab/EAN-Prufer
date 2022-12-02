@@ -1,5 +1,9 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>
+	<div>von enekarab
+	<br>	ASU-1</div>
+	<br>
+	<div>--------------------------------------------------</div>	
+	<title>
 		Prüfziffer EAN
 		</title>
 		
@@ -18,38 +22,39 @@
 				var vZ10;
 				var vZ11;
 				var vZ12;
-				var vPruefsumme;
+				var vErgebnis;
 				var vPruefziffer;
 				var vAusgabeHtml;
 				
-				vZ1=parseFloat(document.getElementById("idZ1").value);
-				vZ2=parseFloat(document.getElementById("idZ2").value);
-				vZ3=parseFloat(document.getElementById("idZ3").value);
-				vZ4=parseFloat(document.getElementById("idZ4").value);
-				vZ5=parseFloat(document.getElementById("idZ5").value);
-				vZ6=parseFloat(document.getElementById("idZ6").value);
-				vZ7=parseFloat(document.getElementById("idZ7").value);
-				vZ8=parseFloat(document.getElementById("idZ8").value);
-				vZ9=parseFloat(document.getElementById("idZ9").value);
-				vZ10=parseFloat(document.getElementById("idZ10").value);
-				vZ11=parseFloat(document.getElementById("idZ11").value);
-				vZ12=parseFloat(document.getElementById("idZ12").value);
+				vZ1=document.getElementById("idZ1").value;
+				vZ2=document.getElementById("idZ2").value;
+				vZ3=document.getElementById("idZ3").value;
+				vZ4=document.getElementById("idZ4").value;
+				vZ5=document.getElementById("idZ5").value;
+				vZ6=document.getElementById("idZ6").value;
+				vZ7=document.getElementById("idZ7").value;
+				vZ8=document.getElementById("idZ8").value;
+				vZ9=document.getElementById("idZ9").value;
+				vZ10=document.getElementById("idZ10").value;
+				vZ11=document.getElementById("idZ11").value;
+				vZ12=document.getElementById("idZ12").value;
 				
 								
-				vPruefsumme=(vZ1*1)+(vZ2*3)+(vZ3*1)+(vZ4*3)+(vZ5*1)+(vZ6*3)+(vZ7*1)+(vZ8*3)+(vZ9*1)+(vZ10*3)+(vZ11*1)+(vZ12*3);
+				vErgebnis= (vZ1*1) + (vZ2*3) + (vZ3*1) + (vZ4*3) + (vZ5*1) + (vZ6*3) + (vZ7*1) + (vZ8*3) + (vZ9*1) + (vZ10*3) + (vZ11*1) + (vZ12*3);
 				
-				vPruefziffer=10-(vPruefsumme%10);
+				vPruefziffer= 10 - (vErgebnis%10);
 				
-				if(vPruefziffer==10){
+				if(vPruefziffer == 10){
 				
-					vPruefziffer=0;
+					vPruefziffer = 0;
 				
 				}
 				
-				vAusgabeHtml = " Die Artikelnummer lautet: " + vZ1+vZ2+vZ3+vZ4+vZ5+vZ6+vZ7+vZ8+vZ9+vZ10+vZ11+vZ12+ ". ";
-				vAusgabeHtml= vAusgabeHtml + "Die Prüfsumme ist " +vPruefsumme+ " und die Prüfziffer ist " +vPruefziffer;
+				vAusgabeHtml = " Die Artikelnummer lautet: " + vZ1+vZ2+vZ3+vZ4+vZ5+vZ6+vZ7+vZ8+vZ9+vZ10+vZ11+vZ12+ ".";
 				
-				document.getElementById("idAusgabeHtml").innerHTML=vAusgabeHtml;
+				vAusgabeHtml = vAusgabeHtml + " Die Prüfsumme ist " + vErgebnis + " und die Prüfziffer ist " + vPruefziffer;
+				
+				document.getElementById("idAusgabeHtml").innerHTML = vAusgabeHtml;
 				
 			}	
 			
@@ -59,26 +64,26 @@
 	<body>
 		<h1>Prüfziffer EAN</h1>
 		Europäische Artikelnummer: 
-		<input id="idZ1" type="text" maxlength="1" size="1" value="0">
-		<input id="idZ2" type="text" maxlength="1" size="1" value="0">
-		<input id="idZ3" type="text" maxlength="1" size="1" value="0">
-		<input id="idZ4" type="text" maxlength="1" size="1" value="1">
+		<input id="idZ1" type="text" maxlength="1" size="1" value="9">
+		<input id="idZ2" type="text" maxlength="1" size="1" value="9">
+		<input id="idZ3" type="text" maxlength="1" size="1" value="9">
+		<input id="idZ4" type="text" maxlength="1" size="1" value="9">
 		<input id="idZ5" type="text" maxlength="1" size="1" value="9">
-		<input id="idZ6" type="text" maxlength="1" size="1" value="6">
-		<input id="idZ7" type="text" maxlength="1" size="1" value="0">
-		<input id="idZ8" type="text" maxlength="1" size="1" value="2">
-		<input id="idZ9" type="text" maxlength="1" size="1" value="1">
-		<input id="idZ10" type="text" maxlength="1" size="1" value="1">
-		<input id="idZ11" type="text" maxlength="1" size="1" value="1">
-		<input id="idZ12" type="text" maxlength="1" size="1" value="3">
+		<input id="idZ6" type="text" maxlength="1" size="1" value="9">
+		<input id="idZ7" type="text" maxlength="1" size="1" value="9">
+		<input id="idZ8" type="text" maxlength="1" size="1" value="9">
+		<input id="idZ9" type="text" maxlength="1" size="1" value="9">
+		<input id="idZ10" type="text" maxlength="1" size="1" value="9">
+		<input id="idZ11" type="text" maxlength="1" size="1" value="9">
+		<input id="idZ12" type="text" maxlength="1" size="1" value="9">
 		
 		
 		<br> 
 		<br> 
-		<button onclick="rechne();">Berechne Prüfziffer</button>
+		<button onclick="rechne();">Berechne Prüfziffer !</button>
 		<br> 
 		<br> 
-		<div id="idAusgabeHtml">Die Prüfsumme ist: 58 und die Prüfziffer ist: 2</div>
+		<div id="idAusgabeHtml">Die Prüfsumme ist: 216 und die Prüfziffer ist: 4</div>
 	
 
 </body></html>
